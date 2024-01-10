@@ -1,26 +1,40 @@
 # cocktail_project
 
-This template should help get you started developing with Vue 3 in Vite.
+Выполненное задание по запросу тестового:
 
-## Recommended IDE Setup
+### Условия:
+```Задача:
+Реализовать приложение с выводом данных полученных по API.
+Пример схематичного интерфейса приложения изображен в app_example.png
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Исходные данные:
+- Всю необходимую информацию запрашиваем по GET-запросу: https://www.thecocktaildb.com/api/json/v1/1/search.php?s=<cocktail_code>
+- Доступные cocktail_code: margarita, mojito, a1, kir
 
-## Type Support for `.vue` Imports in TS
+Функциональные требования:
+- Использовать менеджер состояния для сохранения данных и исключения дублирующих запросов
+- Список кодов (cocktail_code) использовать для названия пунктов меню и формирования url-страниц
+- Каждый пункт меню ведет на страницу со своим описанием
+- Активный пункт меню должен быть выделен
+- По умолчанию первый пункт меню, являеться главной страницей и использует его же урл
+- Переход на url-адрес "/", должен отправлять пользователя на url-первого пункта меню
+- При переходе на несуществующую страницу, показать 404 ошибку в произвольной форме
+- Резиновая верстка интерфейса. Максимальная ширина 1024px, минимальная 360px
+- lazy-loading для загрузки изображений
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+Требования по стеку на выбор:
+- vue 3 + pinia
+- vite
+- eslint
+- html 5, css 3
+- scss/sass, stylus, less, postCSS
+- Адаптивная верстка (chrome, safari)
+- typescript 
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
+По окончанию:
+- выложить в репозиторий
+```
 ## Project Setup
 
 ```sh
