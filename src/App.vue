@@ -13,22 +13,20 @@ import CocktailMenu from '@/components/CocktailMenu.vue'
   <RouterView />
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 header {
   line-height: 1.5;
   max-height: 100vh;
-}
 
-@media (min-width: 1024px) {
-  header {
+  @media (min-width: 1024px) {
     display: flex;
     padding-right: calc(var(--section-gap) / 2);
-  }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    .wrapper {
+      display: flex;
+      place-items: flex-start;
+      flex-wrap: wrap;
+    }
   }
 }
 </style>

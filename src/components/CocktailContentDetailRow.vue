@@ -12,21 +12,28 @@ defineProps<{
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+.title, .content {
+  margin-bottom: 0.5rem;
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem; // для .title
+  }
+}
+
 .title {
   font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-.content {
-  font-size: 0.7rem;
-  margin-bottom: 1rem;
-}
-@media (min-width: 1024px) {
-  .title {
+
+  @media (min-width: 1024px) {
     font-size: 1.5rem;
   }
-  .content {
+}
+
+.content {
+  font-size: 0.7rem;
+
+  @media (min-width: 1024px) {
     font-size: 1rem;
   }
 }

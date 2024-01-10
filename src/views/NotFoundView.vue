@@ -6,36 +6,33 @@
 </template>
 
 <script setup lang="ts"></script>
-
-<style>
+<style lang="scss">
 .not-found {
   min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-}
 
-.not-found h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.not-found p {
-  font-size: 1.5rem;
-}
-
-@media (min-width: 1024px) {
-  .not-found {
-    min-height: 100vh;
-  }
-
-  .not-found h1 {
-    font-size: 4rem;
-  }
-
-  .not-found p {
+  h1 {
     font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    min-height: 100vh;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
   }
 }
 </style>

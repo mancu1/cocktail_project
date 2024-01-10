@@ -28,52 +28,49 @@ const cocktailsRouterLinks = computed(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 nav {
   width: 100%;
   font-size: 1rem;
   text-align: left;
   display: flex;
-
   background-color: var(--color-background-soft);
   padding: 0.7rem;
-}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  flex-direction: row;
-  display: flex;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-
-  text-transform: capitalize;
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  nav {
+  @media (min-width: 1024px) {
     margin-top: 0;
     height: 100vh;
     font-size: 1.5rem;
   }
+
   ul {
-    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+
+    @media (min-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding: 0 1rem;
+    border-left: 1px solid var(--color-border);
+    text-transform: capitalize;
+
+    &:first-of-type {
+      border: 0;
+    }
+
+    &.router-link-exact-active {
+      color: var(--color-text);
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
   }
 }
 </style>
